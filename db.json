@@ -1,0 +1,17 @@
+{
+	"kotlin": [{
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the default trimMargin() margin prefix?",
+			"correct_answer": "|",
+			"incorrect_answers": ["<", ":", "-"]
+		},
+		{
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "You can override a non-abstract open member with an abstract one.",
+			"correct_answer": "true",
+			"incorrect_answers": ["false"]
+		}
+	]
+}
