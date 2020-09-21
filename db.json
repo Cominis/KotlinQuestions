@@ -1,17 +1,40 @@
 {
-	"kotlin": [{
-			"type": "multiple",
+	"kotlin": [
+		{
+			"id": "0",
+			"type": "single-select",
 			"difficulty": "easy",
 			"question": "What is the default trimMargin() margin prefix?",
-			"correct_answer": "|",
-			"incorrect_answers": ["<", ":", "-"]
+			"correct_answers": ["|"],
+			"incorrect_answers": ["<", ":", "-"],
+			"explanation": "The default is |, but you can provide your own margin delimiter as parameter, e. g. trimMargin(\"#\")"
 		},
 		{
+			"id": "1",
 			"type": "boolean",
 			"difficulty": "easy",
 			"question": "You can override a non-abstract open member with an abstract one.",
-			"correct_answer": "true",
-			"incorrect_answers": ["false"]
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": ""
+		},
+		{
+			"id": "2",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "We do not need to annotate an abstract class or function with open – it goes without saying.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": ""
+		},
+		{
+			"id": "3",
+			"type": "multi-select",
+			"difficulty": "medium",
+			"question": "Which extension functions take context object as lambda parameter?",
+			"correct_answers": ["let", "also"],
+			"incorrect_answers": ["run", "apply"],
+			"explanation": ""
 		}
 	]
 }
