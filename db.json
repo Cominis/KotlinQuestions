@@ -1,7 +1,7 @@
 {
 	"kotlin": [
 		{
-			"id": "0",
+			"id": "1",
 			"type": "single-select",
 			"difficulty": "easy",
 			"question": "What is the default trimMargin() margin prefix?",
@@ -10,7 +10,7 @@
 			"explanation": "The default is |, but you can provide your own margin delimiter as parameter, e. g. trimMargin(\"#\")"
 		},
 		{
-			"id": "1",
+			"id": "2",
 			"type": "boolean",
 			"difficulty": "easy",
 			"question": "You can override a non-abstract open member with an abstract one.",
@@ -19,7 +19,7 @@
 			"explanation": ""
 		},
 		{
-			"id": "2",
+			"id": "3",
 			"type": "boolean",
 			"difficulty": "easy",
 			"question": "We do not need to annotate an abstract class or function with open – it goes without saying.",
@@ -28,13 +28,202 @@
 			"explanation": ""
 		},
 		{
-			"id": "3",
+			"id": "4",
 			"type": "multi-select",
 			"difficulty": "medium",
 			"question": "Which extension functions take context object as lambda parameter?",
 			"correct_answers": ["let", "also"],
 			"incorrect_answers": ["run", "apply"],
 			"explanation": ""
+		},
+		{
+			"id": "5",
+			"type": "single-select",
+			"difficulty": "medium",
+			"question": "Difference between for(i in 1..100) and for(i in 1 until 100)?",
+			"correct_answers": ["infix until function exclude 100."],
+			"incorrect_answers": ["operator .. exclude 100.", "They are the same."],
+			"explanation": ""
+		},
+		{
+			"id": "6",
+			"type": "Boolean",
+			"difficulty": "easy",
+			"question": "Names of test methods can have spaces.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "True, because test names can be written in backticks which includes spaces."
+		},
+		{
+			"id": "7",
+			"type": "single-select",
+			"difficulty": "esay",
+			"question": "Which ones creates array of nulls?",
+			"correct_answers": ["arrayOfNulls(size)"],
+			"incorrect_answers": ["Array<String>(size){null}", "arrayOf(null)"],
+			"explanation": "Array<String?>(size){null} would be correct, because in kotlin you have to explicitly name type as nullable. Same goes to arrayOf<String?>(null)"
+		},
+		{
+			"id": "8",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "val a = 2 + \"st\" is valid.",
+			"correct_answers": ["false"],
+			"incorrect_answers": ["true"],
+			"explanation": "Concatenation of string with other types is valid when first element is a string e. g. val a = \"st\" + 2"
+		},
+		{
+			"id": "9",
+			"type": "multi-select",
+			"difficulty": "easy",
+			"question": "How to make a class inheritable?",
+			"correct_answers": ["Mark class with open keyword", "Make class abstract", "Mark class with sealed keyword"],
+			"incorrect_answers": ["Class is inheritable by default"],
+			"explanation": "Since Kotlin 1.1 sealed classes can be inherited."
+		},
+		{
+			"id": "10",
+			"type": "single-select",
+			"difficulty": "easy",
+			"question": "What does the method with open keyword do in final class?",
+			"correct_answers": ["Nothing"],
+			"incorrect_answers": ["Makes method overridable", "makes method abstract"],
+			"explanation": "The open modifier has no effect when added on members of a final class (i.e.. a class with no open modifier)."
+		},
+		{
+			"id": "11",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "Override keyword is open itself.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "Use final override for method to be final."
+		},
+		{
+			"id": "12",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "You can override var property with val property.",
+			"correct_answers": ["false"],
+			"incorrect_answers": ["true"],
+			"explanation": "You can override a val property with a var property, but not vice versa."
+		},
+		{
+			"id": "13",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "class Rectangle(override val vertexCount: Int = 4) : Shape, when interface Shape { val vertexCount: Int } is valid.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": ""
+		},
+		{
+			"id": "14",
+			"type": "single-select",
+			"difficulty": "medium",
+			"question": "How to call super class functions and properties in derived class?",
+			"correct_answers": ["with super keyword"],
+			"incorrect_answers": ["with base keyword", "with parent keyword"],
+			"explanation": "Code in a derived class can call its superclass functions and property accessors implementations using the super keyword."
+		},
+		{
+			"id": "15",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "You can override a non-abstract open member with an abstract one.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": ""
+		},
+		{
+			"id": "16",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "You can omit the property type if it has a getter method.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "Since Kotlin 1.1, you can omit the property type if it can be inferred from the getter e. g. val isEmpty get() = this.size == 0"
+		},
+		{
+			"id": "17",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "In code interface A { fun foo() } function foo is abstract.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "It is default for functions without body in interfaces to be abstract."
+		},
+		{
+			"id": "18",
+			"type": "single-select",
+			"difficulty": "easy",
+			"question": "What is the signature of functional interfaces?",
+			"correct_answers": ["fun interface IntPredicate { fun accept(i: Int): Boolean }"],
+			"incorrect_answers": ["interface fun IntPredicate { fun accept(i: Int): Boolean }", "functional IntPredicate { fun accept(i: Int): Boolean }"],
+			"explanation": ""
+		},
+		{
+			"id": "19",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "Functional interfaces can have more than one member.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "Functional interfaces can have multiple non-abstract members and one abstract member."
+		},
+		{
+			"id": "20",
+			"type": "boolean",
+			"difficulty": "medium",
+			"question": "Outer class can see private members of its inner classes.",
+			"correct_answers": ["false"],
+			"incorrect_answers": ["true"],
+			"explanation": ""
+		},
+		{
+			"id": "21",
+			"type": "single-select",
+			"difficulty": "medium",
+			"question": "What visibility the overridden protected members have if not specified?",
+			"correct_answers": ["protected"],
+			"incorrect_answers": ["public", "private", "internal"],
+			"explanation": "The overriding member will also have a protected visibility."
+		},
+		{
+			"id": "22",
+			"type": "single-select",
+			"difficulty": "medium",
+			"question": "What happens when the extension function signature is the same as class member?",
+			"correct_answers": ["Class member function always win"],
+			"incorrect_answers": ["Extension function always win", "It is unpredictable"],
+			"explanation": ""
+		},
+		{
+			"id": "23",
+			"type": "single-select",
+			"difficulty": "easy",
+			"question": "You can have extension functions for companion objects.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "E. g. fun MyClass.Companion.printCompanion() { println(\"companion\") }"
+		},
+		{
+			"id": "24",
+			"type": "boolean",
+			"difficulty": "easy",
+			"question": "You can destruct data class?",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "Yes, because data classes implement componentN() functions."
+		},
+		{
+			"id": "25",
+			"type": "single-select",
+			"difficulty": "easy",
+			"question": "You can access enum values in generic way.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "Since Kotlin 1.1, it's possible to access the constants in an enum class in a generic way, using the enumValues<T>() and enumValueOf<T>() functions."
 		}
 	]
 }
