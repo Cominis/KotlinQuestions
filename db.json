@@ -1,6 +1,15 @@
 {
 	"kotlin": [
 		{
+			"id": "0",
+			"type": "single-select",
+			"difficulty": "easy",
+			"question": "You can access enum values in generic way.",
+			"correct_answers": ["true"],
+			"incorrect_answers": ["false"],
+			"explanation": "Since Kotlin 1.1, it's possible to access the constants in an enum class in a generic way, using the enumValues<T>() and enumValueOf<T>() functions."
+		},
+		{
 			"id": "1",
 			"type": "single-select",
 			"difficulty": "easy",
@@ -215,15 +224,6 @@
 			"correct_answers": ["true"],
 			"incorrect_answers": ["false"],
 			"explanation": "Yes, because data classes implement componentN() functions."
-		},
-		{
-			"id": "25",
-			"type": "single-select",
-			"difficulty": "easy",
-			"question": "You can access enum values in generic way.",
-			"correct_answers": ["true"],
-			"incorrect_answers": ["false"],
-			"explanation": "Since Kotlin 1.1, it's possible to access the constants in an enum class in a generic way, using the enumValues<T>() and enumValueOf<T>() functions."
 		}
 	]
 }
